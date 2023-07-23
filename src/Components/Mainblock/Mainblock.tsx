@@ -14,9 +14,6 @@ const MainBlock = () => {
   const selectedBoard = useAppSelector((state) => state.selectedBoard);
   const columnsForRender = useAppSelector(selectColumns);
 
-  const STATE = useAppSelector((state) => state.mainData);
-  console.log("+++++++++++++++++ ", STATE);
-
   const [modalAddColumn, setModalAddColumn] = useState<boolean>(false);
 
   function selectColumns(state: any) {
