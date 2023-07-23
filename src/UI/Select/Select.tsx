@@ -51,7 +51,7 @@ const Select = ({ value, onChange, options }: SelectProps) => {
       <ul className={`${"options"} ${isOpen ? "show" : ""}`}>
         {options.map((option, index) => (
           <li
-            key={option.label}
+            key={option.label + index}
             // стили
             className={classNames("option", {
               selected: isOptionSelected(option),

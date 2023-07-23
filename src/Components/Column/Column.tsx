@@ -4,7 +4,7 @@ import { useAppSelector, useAppDispatch } from "../../store/store";
 import { Task as TaskType, Column as ColumnType } from "../../data";
 import classNames from "classnames";
 import { useState } from "react";
-import { changeColumnOnDrag } from "../../slices/data";
+import { changeColumnInTask } from "../../slices/data";
 
 const Column = ({ columnId }: { columnId: number }) => {
   const dispatch = useAppDispatch();
@@ -39,7 +39,7 @@ const Column = ({ columnId }: { columnId: number }) => {
     e.preventDefault();
     const data = e.dataTransfer.getData("text");
     setDragOverHighlight(false);
-    dispatch(changeColumnOnDrag({ taskID: +data, newColumnID: columnId }));
+    dispatch(changeColumnInTask({ taskID: +data, columnID: columnId }));
   }
 
   function onDragOverHandler(e: React.DragEvent<HTMLDivElement>) {

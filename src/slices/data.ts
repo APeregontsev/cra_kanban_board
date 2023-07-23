@@ -19,7 +19,6 @@ export type EditTaskDataType = {
   subtasks: { subtaskID: number; subtaskName: string; placeholder: string }[];
 };
 export type AddColumnType = { boardID: ID; columnName: string };
-export type ChangeColumnOnDragType = { taskID: number; newColumnID: number };
 
 const initialState = data;
 
@@ -39,6 +38,7 @@ const mainDataSlice = createSlice({
         const isColumnFound = state.columns.find((existingColumn) => existingColumn.name === newColumn);
 
         if (isColumnFound) {
+          if (columnsIdsOfNewBoard.includes(isColumnFound.id)) return;
           columnsIdsOfNewBoard.push(isColumnFound.id);
           return;
         } else {
@@ -185,7 +185,8 @@ const mainDataSlice = createSlice({
 
     changeColumnInTask(state, action: PayloadAction<{ taskID: ID; columnID: ID }>) {
       state.tasks.forEach((task) => {
-        if (task.id === action.payload.taskID) return (task.columnId = action.payload.columnID);
+        if (task.id !== action.payload.taskID) return;
+        task.columnId = action.payload.columnID;
       });
     },
 
@@ -290,14 +291,8 @@ const mainDataSlice = createSlice({
       // Lets ADD ID of new column to the Board in the State
       state.boards.forEach((board) => {
         if (board.id !== action.payload.boardID) return;
+        if (board.columnsIncluded.includes(columnIdToBoard)) return;
         if (columnIdToBoard) board.columnsIncluded.push(columnIdToBoard);
-      });
-    },
-
-    changeColumnOnDrag(state, action: PayloadAction<ChangeColumnOnDragType>) {
-      state.tasks.forEach((task) => {
-        if (task.id !== action.payload.taskID) return;
-        task.columnId = action.payload.newColumnID;
       });
     },
   },
@@ -313,7 +308,6 @@ export const {
   toggleSubtaskDone,
   changeColumnInTask,
   addColumn,
-  changeColumnOnDrag,
 } = mainDataSlice.actions;
 
 export default mainDataSlice.reducer;

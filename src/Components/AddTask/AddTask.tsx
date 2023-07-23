@@ -29,16 +29,12 @@ const AddTask = ({ modalClose, boardID }: AddTaskType) => {
     const activeBoard: BoardType = state.mainData.boards.find((board: BoardType) => board.id === boardID);
     const columns: ColumnType[] = state.mainData.columns;
 
-    const resultData: { label: string; value: number }[] = [];
-
-    const filteredColumns = columns.filter((existingColumn) =>
-      activeBoard.columnsIncluded.includes(existingColumn.id)
-    );
-
-    filteredColumns.forEach((column) => {
-      const tempData = { label: column.name, value: column.id };
-      resultData.push(tempData);
-    });
+    const resultData: { label: string; value: number }[] = columns
+      .filter((existingColumn) => activeBoard.columnsIncluded.includes(existingColumn.id))
+      .map((column) => {
+        const temp = { label: column.name, value: column.id };
+        return temp;
+      });
 
     return resultData;
   }
