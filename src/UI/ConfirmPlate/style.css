@@ -1,0 +1,25 @@
+.add-task-title {
+  margin-bottom: 24px;
+}
+
+.add-task-title.red {
+  color: var(--Red);
+  margin-bottom: 24px;
+}
+
+.inner-task-description {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 23px;
+  color: var(--Medium-grey);
+  margin-bottom: 24px;
+}
+
+.buttons-wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  gap: 15px;
+}
