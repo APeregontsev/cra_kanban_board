@@ -1,0 +1,56 @@
+.task-wrapper {
+  box-shadow: 0px 4px 6px rgba(54, 78, 126, 0.101545);
+  border-radius: 8px;
+  background-color: var(--White);
+  margin-bottom: 20px;
+  padding: 23px 16px;
+  width: 100%;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.task-wrapper:hover .task-title {
+  color: var(--Main-purple);
+}
+
+.task-title {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 19px;
+  margin-bottom: 8px;
+}
+.task-body {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  color: var(--Medium-grey);
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+
+.wrapper.dark .task-wrapper {
+  background-color: var(--Dark-grey);
+}
+
+.wrapper.dark .task-title {
+  color: var(--White);
+}
+
+.completed-subtasks {
+}
+.total-subtasks {
+}
+
+.drag-zone-column {
+  display: flex;
+  flex-direction: column;
+  cursor: grab;
+  min-width: 15px;
+  background: url("./../../img/drag_dots.svg") 0 0 repeat-y;
+  margin-left: 10px;
+}

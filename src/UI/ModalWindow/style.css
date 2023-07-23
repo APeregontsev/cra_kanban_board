@@ -1,0 +1,32 @@
+.modal-wrapper {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: default;
+}
+
+.modal-content {
+  padding: 25px;
+  background-color: var(--White);
+  border-radius: 8px;
+  width: 480px;
+  max-height: 100vh;
+}
+
+@media (max-width: 970px) {
+  .modal-content {
+    margin: 15px;
+    max-width: 460px;
+  }
+}
+
+.wrapper.dark .modal-content {
+  background-color: var(--Dark-grey);
+}

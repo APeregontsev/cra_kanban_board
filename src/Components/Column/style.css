@@ -1,0 +1,64 @@
+.column-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 280px;
+
+  min-height: calc(100vh - 24px - 24px - 92px);
+}
+
+.inner-column-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+
+  min-height: 100%;
+  min-width: 100%;
+  border-radius: 8px;
+}
+
+.inner-column-wrapper.highlight {
+  background-color: #a536361f;
+}
+
+.column-head {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  color: var(--Medium-grey);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 2.4px;
+  padding-bottom: 24px;
+}
+
+.column-dot {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: orange;
+}
+
+.column-dot.doing {
+  background-color: #8471f2;
+}
+
+.column-dot.done {
+  background-color: #67e2ae;
+}
+
+.column-dot.todo {
+  background-color: #49c4e5;
+}
+
+.column-name {
+  margin-left: 12px;
+  margin-right: 12px;
+  text-transform: uppercase;
+}
+.column-items-number {
+}

@@ -1,0 +1,59 @@
+.dots-wrapper {
+  position: relative;
+  background: url("./../../img/three_dots.svg") center no-repeat;
+  width: 5px;
+  height: 20px;
+  padding: 0 10px 0 10px;
+  cursor: pointer;
+}
+
+.dots-menu-wrapper {
+  position: absolute;
+  left: -100px;
+  top: 36px;
+  width: 120px;
+  height: 100px;
+  background-color: var(--White);
+  border-radius: 10px;
+  padding: 16px;
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  cursor: default;
+}
+
+.dots-menu-wrapper.active {
+  display: flex;
+}
+
+.wrapper.dark .dots-menu-wrapper {
+  background-color: var(--Very-dark-grey);
+}
+
+/* --------BUTTONS---------------------------------------------------------------------- */
+
+.edit-board-btn {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 23px;
+  color: var(--Medium-grey);
+  cursor: pointer;
+}
+.delete-board-btn {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 23px;
+  color: var(--Red);
+  cursor: pointer;
+}
+
+.edit-board-btn:hover {
+  font-weight: 800;
+}
+.delete-board-btn:hover {
+  font-weight: 800;
+}

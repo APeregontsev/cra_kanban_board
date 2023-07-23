@@ -1,0 +1,106 @@
+.container {
+  min-height: 1.5em;
+  align-items: center;
+  gap: 0.5em;
+  padding: 0.5em;
+  border-radius: 0.25em;
+  outline: none;
+  height: 40px;
+  border: 1px solid var(--Light-grey);
+  border-radius: 4px;
+  width: 100%;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 23px;
+  padding-left: 15px;
+  display: flex;
+  position: relative;
+  cursor: pointer;
+}
+
+.wrapper.dark .container {
+  color: var(--White);
+}
+
+.empty {
+  border: 1px solid var(--Red);
+}
+
+.container:focus {
+  border-color: var(--Main-purple);
+}
+
+.value {
+  flex-grow: 1;
+  display: flex;
+  gap: 0.5em;
+  flex-wrap: wrap;
+}
+
+.caret {
+  width: 8px;
+  height: 8px;
+  transform: rotate(-45deg);
+  border-bottom: 2px solid var(--Main-purple);
+  border-left: 2px solid var(--Main-purple);
+  translate: -10px 0px;
+}
+
+.caret:hover {
+  border-top-color: green;
+}
+
+.options {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: none;
+  max-height: 15em;
+  overflow-y: auto;
+  border: 0.05em solid var(--Light-grey);
+  border-radius: 0.25em;
+  width: 100%;
+  left: 0;
+  top: calc(100% + 0.25em);
+  background-color: white;
+  z-index: 100;
+}
+
+.wrapper.dark .options {
+  border: 0.05em solid var(--Very-dark-grey);
+}
+
+.options.show {
+  display: block;
+}
+
+.option {
+  padding: 0.25em 0.5em;
+  cursor: pointer;
+}
+
+.wrapper.dark .option {
+  background-color: var(--Very-dark-grey);
+  color: var(--Medium-grey);
+}
+
+.wrapper.dark .option.selected {
+  color: var(--White);
+}
+
+.option.selected {
+  background-color: var(--Main-purple);
+  color: var(--White);
+}
+
+.option.highlighted {
+  background-color: var(--Main-purple);
+  opacity: 0.25;
+  color: white;
+}
+
+.wrapper.dark .option.highlighted {
+  color: var(--White);
+}

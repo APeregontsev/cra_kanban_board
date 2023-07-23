@@ -1,0 +1,27 @@
+.show-button {
+  background-color: var(--Main-purple);
+  height: 50px;
+  width: 56px;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: absolute;
+  left: 0;
+  bottom: 5%;
+  z-index: 20;
+}
+
+.show-button:hover {
+  background-color: var(--Main-purple-hover);
+}
+
+.show-button img {
+  vertical-align: middle;
+}
+
+.hide {
+  display: none;
+}
