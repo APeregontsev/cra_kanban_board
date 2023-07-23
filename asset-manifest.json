@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/cra_kanban_board/static/css/main.fc5c7c10.css",
-    "main.js": "/cra_kanban_board/static/js/main.958d9331.js",
+    "main.js": "/cra_kanban_board/static/js/main.5477859a.js",
     "static/media/kanban_logo.svg": "/cra_kanban_board/static/media/kanban_logo.2367a926b314ab2576e7.svg",
     "static/media/kanban_logo_dark.svg": "/cra_kanban_board/static/media/kanban_logo_dark.0b5baa6b49f713ff2929.svg",
     "static/media/hide_icon.svg": "/cra_kanban_board/static/media/hide_icon.7e57fe4505973846c5b8.svg",
@@ -15,10 +15,10 @@
     "static/media/cross_hover.svg": "/cra_kanban_board/static/media/cross_hover.5dc18b8caf527193eaed.svg",
     "static/media/drag_dots.svg": "/cra_kanban_board/static/media/drag_dots.06a8c3a7db1fdfffe5e6.svg",
     "main.fc5c7c10.css.map": "/cra_kanban_board/static/css/main.fc5c7c10.css.map",
-    "main.958d9331.js.map": "/cra_kanban_board/static/js/main.958d9331.js.map"
+    "main.5477859a.js.map": "/cra_kanban_board/static/js/main.5477859a.js.map"
   },
   "entrypoints": [
     "static/css/main.fc5c7c10.css",
-    "static/js/main.958d9331.js"
+    "static/js/main.5477859a.js"
   ]
 }
