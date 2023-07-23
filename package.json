@@ -1,8 +1,10 @@
+
+
+
 {
   "name": "cra_kanban-task-management",
   "version": "0.1.0",
-  "homepage": "https://aperegontsev.github.io/cra_kanban_board",
-  "private": true,
+   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.5",
     "@testing-library/jest-dom": "^5.16.5",

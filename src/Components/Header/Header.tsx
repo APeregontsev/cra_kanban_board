@@ -52,7 +52,7 @@ const Header = ({ sidebarVisibility }: { sidebarVisibility: boolean }) => {
     <div className="main-block-header ">
       <div className={headerLogoStyle}>
         <div className="head-logo">
-          <img src="./cra_kanban_board/img/logo.svg" alt="logo" />
+          <img src="./img/logo.svg" alt="logo" />
         </div>
         <div className="head-text-logo"></div>
       </div>

@@ -14,7 +14,7 @@ const ShowButton = ({}: SHowButtonProps) => {
 
   return (
     <div className={showButtonStyle} onClick={mode.toggleSideBar}>
-      <img src="./cra_kanban_board/img/show_icon.svg" alt="show_sidebar" />
+      <img src="./img/show_icon.svg" alt="show_sidebar" />
     </div>
   );
 };

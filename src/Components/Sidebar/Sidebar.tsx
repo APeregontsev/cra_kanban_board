@@ -36,7 +36,7 @@ const Sidebar = ({}: SidebarProps) => {
       <div className="sidebar">
         <div className="sidebar-head">
           <div className="head-logo">
-            <img src="./cra_kanban_board/img/logo.svg" alt="logo" />
+            <img src="./img/logo.svg" alt="logo" />
           </div>
           <div className="head-text-logo "></div>
         </div>
