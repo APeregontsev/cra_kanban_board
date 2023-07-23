@@ -1,1 +1,0 @@
-Kanban Board (React | TS | Redux\Toolkit | Custom hooks | Drag-and-drop)
