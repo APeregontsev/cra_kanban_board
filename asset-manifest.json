@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/cra_kanban_board/static/css/main.fc5c7c10.css",
+    "main.js": "/cra_kanban_board/static/js/main.c20f4491.js",
+    "static/media/kanban_logo.svg": "/cra_kanban_board/static/media/kanban_logo.2367a926b314ab2576e7.svg",
+    "static/media/kanban_logo_dark.svg": "/cra_kanban_board/static/media/kanban_logo_dark.0b5baa6b49f713ff2929.svg",
+    "static/media/hide_icon.svg": "/cra_kanban_board/static/media/hide_icon.7e57fe4505973846c5b8.svg",
+    "static/media/hide_icon_hover.svg": "/cra_kanban_board/static/media/hide_icon_hover.368d767c94cf3aeca5ba.svg",
+    "static/media/add_board_icon.svg": "/cra_kanban_board/static/media/add_board_icon.e8649f8be07439dae719.svg",
+    "static/media/board_icon.svg": "/cra_kanban_board/static/media/board_icon.7aa7bb11d5cc2e7fe60a.svg",
+    "index.html": "/cra_kanban_board/index.html",
+    "static/media/logo.svg": "/cra_kanban_board/static/media/logo.cfba77ee1e21a6506ca3.svg",
+    "static/media/three_dots.svg": "/cra_kanban_board/static/media/three_dots.8e4c91ae5d0d74ba3777.svg",
+    "static/media/cross.svg": "/cra_kanban_board/static/media/cross.f939c85e969cf2ed1ce8.svg",
+    "static/media/cross_hover.svg": "/cra_kanban_board/static/media/cross_hover.5dc18b8caf527193eaed.svg",
+    "static/media/drag_dots.svg": "/cra_kanban_board/static/media/drag_dots.06a8c3a7db1fdfffe5e6.svg",
+    "main.fc5c7c10.css.map": "/cra_kanban_board/static/css/main.fc5c7c10.css.map",
+    "main.c20f4491.js.map": "/cra_kanban_board/static/js/main.c20f4491.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fc5c7c10.css",
+    "static/js/main.c20f4491.js"
+  ]
+}
