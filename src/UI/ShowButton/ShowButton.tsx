@@ -2,12 +2,7 @@ import "./style.css";
 import classNames from "classnames";
 import { useMode } from "../../useMode";
 
-type SHowButtonProps = {
-  // mode: ModeType;
-  // setMode: (arg: ModeType) => void;
-};
-
-const ShowButton = ({}: SHowButtonProps) => {
+const ShowButton = () => {
   const mode = useMode();
 
   const showButtonStyle = classNames("show-button", { hide: mode.sidebar });

@@ -9,12 +9,7 @@ import ModalWindow from "../../UI/ModalWindow/ModalWindow";
 import AddBoard from "../AddBoard/AddBoard";
 import { useMode } from "../../useMode";
 
-type SidebarProps = {
-  // mode: ModeType;
-  // setMode: (arg: ModeType) => void;
-};
-
-const Sidebar = ({}: SidebarProps) => {
+const Sidebar = () => {
   const dispatch = useAppDispatch();
 
   const [modalAddBoard, setModalAddBoard] = useState<boolean>(false);
@@ -22,8 +17,6 @@ const Sidebar = ({}: SidebarProps) => {
   const boards = useAppSelector((state) => state.mainData.boards);
   const numberOfBoard = boards.length;
   const selectedBoard = useAppSelector((state) => state.selectedBoard);
-
-  const globalState = useAppSelector((state) => state.mainData);
 
   // Mode
   const mode = useMode();

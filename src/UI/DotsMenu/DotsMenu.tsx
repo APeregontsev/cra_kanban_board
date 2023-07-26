@@ -12,28 +12,6 @@ type DotsMenuProps = {
 const DotsMenu = ({ active, onEditText, onDeleteText, onEdit, onDelete }: DotsMenuProps) => {
   const [isMenuShown, setIsMenuShown] = useState<boolean>(false);
 
-  return (
-    <div className="dots-wrapper" onClick={() => setIsMenuShown(!isMenuShown)}>
-      {isMenuShown && (
-        <DropDownMenu
-          onEditText={onEditText}
-          onDeleteText={onDeleteText}
-          onEdit={onEdit}
-          onDelete={onDelete}
-          setIsMenuShown={setIsMenuShown}
-        />
-      )}
-    </div>
-  );
-};
-
-const DropDownMenu = ({
-  onEditText,
-  onDeleteText,
-  onEdit,
-  onDelete,
-  setIsMenuShown,
-}: DotsMenuProps & { setIsMenuShown: React.Dispatch<React.SetStateAction<boolean>> }) => {
   const ref = useRef<HTMLDivElement>(null);
 
   // To close DROPDOWN menu on outside CLICK
@@ -52,7 +30,22 @@ const DropDownMenu = ({
   }, []);
 
   return (
-    <div className="dots-menu-wrapper active" ref={ref}>
+    <div className="dots-wrapper" onClick={() => setIsMenuShown(!isMenuShown)} ref={ref}>
+      {isMenuShown && (
+        <DropDownMenu
+          onEditText={onEditText}
+          onDeleteText={onDeleteText}
+          onEdit={onEdit}
+          onDelete={onDelete}
+        />
+      )}
+    </div>
+  );
+};
+
+const DropDownMenu = ({ onEditText, onDeleteText, onEdit, onDelete }: DotsMenuProps) => {
+  return (
+    <div className="dots-menu-wrapper active">
       <p className="edit-board-btn" onClick={onEdit}>
         {onEditText}
       </p>

@@ -96,7 +96,7 @@
   display: none;
 }
 
-@media (max-width: 660px) {
+@media (max-width: 840px) {
   .board-name-logo {
     display: block;
   }
@@ -110,7 +110,7 @@
   display: none;
 }
 
-@media (max-width: 660px) {
+@media (max-width: 840px) {
   .board-name-arrow {
     display: flex;
   }

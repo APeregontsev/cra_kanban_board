@@ -46,7 +46,7 @@ const Header = ({ sidebarVisibility }: { sidebarVisibility: boolean }) => {
   }, [boards]);
 
   const isAddTaskButtonActive =
-    selectedBoardExist != undefined ? Boolean(selectedBoardExist.columnsIncluded.length) : false;
+    selectedBoardExist !== undefined ? Boolean(selectedBoardExist.columnsIncluded.length) : false;
 
   return (
     <div className="main-block-header ">
@@ -72,7 +72,11 @@ const Header = ({ sidebarVisibility }: { sidebarVisibility: boolean }) => {
             + Add New Task
           </Button>
 
-          <Button type={"mobile"} disabled action={() => console.log("ADD")}>
+          <Button
+            type={"mobile"}
+            disabled={!isAddTaskButtonActive}
+            action={() => setModalAddTask(!modalEditBoard)}
+          >
             +
           </Button>
 

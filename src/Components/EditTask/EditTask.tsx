@@ -27,7 +27,6 @@ type AddTaskType = {
 };
 
 const EditTask = ({ modalClose, taskID }: AddTaskType) => {
-  const boardID = 1;
   const dispatch = useAppDispatch();
 
   // Lets select Task to Edit
