@@ -1,0 +1,9 @@
+.sidebar-wrapper-pop {
+  height: auto;
+}
+
+.sidebar-pop {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}

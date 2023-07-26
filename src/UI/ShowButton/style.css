@@ -25,3 +25,9 @@
 .hide {
   display: none;
 }
+
+@media (max-width: 840px) {
+  .show-button {
+    display: none;
+  }
+}

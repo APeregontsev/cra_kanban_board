@@ -10,6 +10,7 @@ import ConfirmPlate from "../../UI/ConfirmPlate/ConfirmPlate";
 import { useEffect, useState } from "react";
 import EditBoard from "../EditBoard/EditBoard";
 import AddTask from "../AddTask/AddTask";
+import SidebarPopup from "../SidebarPopUp/SidebarPopUp";
 
 const Header = ({ sidebarVisibility }: { sidebarVisibility: boolean }) => {
   const selectedBoard = useAppSelector((state) => state.selectedBoard);
@@ -18,6 +19,7 @@ const Header = ({ sidebarVisibility }: { sidebarVisibility: boolean }) => {
   const [modalDeleteBoard, setModalDeleteBoard] = useState<boolean>(false);
   const [modalEditBoard, setModalEditBoard] = useState<boolean>(false);
   const [modalAddTask, setModalAddTask] = useState<boolean>(false);
+  const [modalMenuPopup, setModalMenuPopup] = useState<boolean>(false);
 
   const headerLogoStyle = classNames("sidebar-head", { hide: sidebarVisibility });
   const boardNameStyle = classNames("board-name-header", { "show-border": !sidebarVisibility });
@@ -60,7 +62,7 @@ const Header = ({ sidebarVisibility }: { sidebarVisibility: boolean }) => {
         <div className="board-name-wrapper">
           <div className="board-name-logo"></div>
           <div className="board-name">{selectedBoard.name}</div>
-          <div className="board-name-arrow "></div>
+          <div className="board-name-arrow" onClick={() => setModalMenuPopup(!modalMenuPopup)}></div>
         </div>
 
         <div className="board-menu-wrapper">
@@ -90,7 +92,6 @@ const Header = ({ sidebarVisibility }: { sidebarVisibility: boolean }) => {
           )}
         </div>
       </div>
-
       <ModalWindow showModal={modalDeleteBoard} action={() => setModalDeleteBoard(!modalDeleteBoard)}>
         <ConfirmPlate
           type={"board"}
@@ -99,13 +100,16 @@ const Header = ({ sidebarVisibility }: { sidebarVisibility: boolean }) => {
           onCancel={() => setModalDeleteBoard(!modalDeleteBoard)}
         />
       </ModalWindow>
-
       <ModalWindow showModal={modalEditBoard} action={() => setModalEditBoard(!modalEditBoard)}>
         <EditBoard modalClose={setModalEditBoard} />
       </ModalWindow>
 
       <ModalWindow showModal={modalAddTask} action={() => setModalAddTask(!modalAddTask)}>
         <AddTask modalClose={setModalAddTask} boardID={selectedBoard.id} />
+      </ModalWindow>
+
+      <ModalWindow showModal={modalMenuPopup} action={() => setModalMenuPopup(!modalMenuPopup)}>
+        <SidebarPopup setModalAddPopupMenu={setModalMenuPopup} />
       </ModalWindow>
     </div>
   );
